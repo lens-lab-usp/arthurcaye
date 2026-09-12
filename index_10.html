@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arthur Caye | Psiquiatria da infância e da adolescência</title>
+<meta name="description" content="Arthur Caye, médico psiquiatra da infância e da adolescência, professor do Departamento de Psiquiatria da Faculdade de Medicina da USP. Pesquisa sobre trajetórias do desenvolvimento, TDAH e predição de risco em saúde mental de crianças e adolescentes.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://arthurcaye.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Arthur Caye">
+<meta property="og:description" content="Médico psiquiatra da infância e da adolescência. Professor do Departamento de Psiquiatria da FMUSP.">
+<meta property="og:url" content="https://arthurcaye.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230E5561'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23ffffff' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+/* ============ tokens ============ */
+:root{
+  --ground:#F4F7F7;
+  --paper:#FFFFFF;
+  --ink:#122226;
+  --ink-2:#4B5F65;
+  --ink-3:#7A8D92;
+  --rule:#DBE4E4;
+  --rule-2:#C2D0D1;
+  --accent:#0E5561;
+  --accent-2:#0B424C;
+  --accent-soft:#E6EFEF;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:34rem;
+  --pad:clamp(1rem,5vw,2.5rem);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0C1416;
+    --paper:#121E21;
+    --ink:#E3EBEB;
+    --ink-2:#A2B3B6;
+    --ink-3:#7A8C8F;
+    --rule:#223134;
+    --rule-2:#31454A;
+    --accent:#84C0CA;
+    --accent-2:#A5D6DD;
+    --accent-soft:#15282D;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C1416;
+  --paper:#121E21;
+  --ink:#E3EBEB;
+  --ink-2:#A2B3B6;
+  --ink-3:#7A8C8F;
+  --rule:#223134;
+  --rule-2:#31454A;
+  --accent:#84C0CA;
+  --accent-2:#A5D6DD;
+  --accent-soft:#15282D;
+}
+
+/* ============ base ============ */
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* ============ language switch ============ */
+#site[data-lang="pt"] [lang="en"]{display:none}
+#site[data-lang="en"] [lang|="pt"]{display:none}
+
+/* ============ shell ============ */
+#site{max-width:52rem;margin:0 auto;padding-inline:var(--pad)}
+.wrap{max-width:100%}
+
+/* ============ header ============ */
+header.top{position:sticky;top:0;z-index:20;background:var(--ground);
+  border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;gap:1rem;
+  padding-block:.7rem;margin-bottom:clamp(2rem,7vw,4.5rem)}
+.brand{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--ink);letter-spacing:0;margin-right:auto}
+.brand:hover{text-decoration:none}
+nav.links{display:none;gap:1.05rem;font-size:.78rem;align-items:center}
+nav.links a{color:var(--ink-2)}
+nav.links a:hover{color:var(--accent)}
+.langbox{display:flex;flex:none;border:1px solid var(--rule-2);border-radius:3px;overflow:hidden}
+.langbox button{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;
+  background:transparent;color:var(--ink-3);border:0;padding:.3rem .55rem;cursor:pointer;line-height:1.4}
+.langbox button[aria-pressed="true"]{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .langbox button[aria-pressed="true"]{color:#0C1416}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .langbox button[aria-pressed="true"]{color:#0C1416}}
+@media (min-width:880px){nav.links{display:flex}}
+
+/* ============ hero ============ */
+.hero{display:grid;grid-template-columns:1fr;gap:1.75rem;align-items:start;
+  padding-bottom:clamp(1.75rem,5vw,2.75rem)}
+@media (min-width:680px){.hero{grid-template-columns:11.5rem 1fr;gap:2.5rem}}
+.portrait{width:11.5rem;height:11.5rem;object-fit:cover;border-radius:2px;
+  border:1px solid var(--rule);background:var(--paper)}
+h1{font-size:clamp(2.3rem,6.5vw,3.1rem);line-height:1.06;margin-bottom:.7rem}
+.role{font-family:var(--serif);font-size:clamp(1.05rem,2.6vw,1.22rem);line-height:1.45;
+  color:var(--ink-2);max-width:30rem}
+.lead{margin-top:1.15rem;font-size:1rem;color:var(--ink-2);max-width:var(--measure)}
+
+/* ============ credential strip ============ */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));
+  gap:.4rem 1.5rem;border-block:1px solid var(--rule);padding-block:1rem;
+  margin-bottom:clamp(2.5rem,8vw,4.5rem)}
+.strip div{font-size:.82rem;color:var(--ink-2);line-height:1.5;
+  padding-block:.3rem;min-width:0}
+.strip b{display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:.15rem}
+
+/* ============ sections ============ */
+section{padding-block:clamp(2.25rem,6vw,3.5rem);border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0;padding-top:0}
+.eyebrow{display:block;font-family:var(--mono);font-size:.68rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.7rem}
+h2{font-size:clamp(1.45rem,3.6vw,1.8rem);line-height:1.2;margin-bottom:1.4rem}
+.prose{display:flex;flex-direction:column;gap:1rem;max-width:var(--measure);
+  font-size:1rem;color:var(--ink-2)}
+.prose strong{color:var(--ink);font-weight:600}
+
+/* ============ timeline ============ */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding-left:1.5rem;padding-bottom:1.6rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:0;top:.42rem;
+  width:9px;height:9px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 3px var(--ground);z-index:1}
+.tl li::after{content:"";position:absolute;left:4px;top:.42rem;bottom:-.5rem;
+  width:1px;background:var(--rule-2)}
+.tl li:last-child::after{display:none}
+.tl-when{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;
+  color:var(--accent);font-variant-numeric:tabular-nums;margin-bottom:.12rem}
+.tl-what{display:block;font-family:var(--serif);font-size:1.05rem;font-weight:600;
+  color:var(--ink);line-height:1.35}
+.tl-where{display:block;font-size:.85rem;color:var(--ink-3);line-height:1.55;margin-top:.15rem;
+  max-width:34rem}
+@media (min-width:640px){
+  .tl li{padding-left:7.5rem}
+  .tl li::before{left:calc(6rem - 4px)}
+  .tl li::after{left:6rem}
+  .tl-when{position:absolute;left:0;top:.15rem;width:5.2rem;text-align:right;margin:0}
+}
+
+/* ============ lab / centre cards ============ */
+.labs{display:flex;flex-direction:column;gap:1.15rem;margin-top:.25rem}
+.axes{list-style:none;margin:.2rem 0 .95rem;padding:0;
+  display:flex;flex-direction:column;gap:.5rem}
+.axes li{position:relative;padding-left:.95rem;font-size:.85rem;
+  color:var(--ink-2);line-height:1.5}
+.axes li::before{content:"";position:absolute;left:0;top:.58rem;
+  width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.axes b{color:var(--ink);font-weight:600}
+
+/* ============ topics ============ */
+.topics{display:grid;grid-template-columns:1fr;gap:0 2.5rem}
+@media (min-width:720px){.topics{grid-template-columns:1fr 1fr}}
+.topic{padding-block:1.1rem;border-top:1px solid var(--rule)}
+.topic h3{font-size:1.05rem;line-height:1.3;margin-bottom:.3rem}
+.topic p{font-size:.9rem;color:var(--ink-2);line-height:1.6}
+
+/* ============ research ============ */
+.labcard{background:var(--paper);margin-top:0!important;border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:2px;padding:1.35rem 1.5rem;max-width:var(--measure)}
+.labcard .kicker{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--ink-3);margin-bottom:.35rem}
+.labcard h3{font-size:1.1rem;margin-bottom:.4rem}
+.labcard p{font-size:.9rem;color:var(--ink-2);margin-bottom:.75rem}
+.labcard a{font-size:.88rem;font-weight:500}
+
+/* ============ publications ============ */
+.pubs{list-style:none;margin:0;padding:0}
+.pubs li{display:grid;grid-template-columns:1fr;gap:.2rem;
+  padding-block:1.05rem;border-top:1px solid var(--rule)}
+.pubs li:first-child{border-top:0;padding-top:0}
+@media (min-width:620px){
+  .pubs li{grid-template-columns:4rem 1fr;gap:.2rem 1.75rem}
+  .pubs .yr{grid-row:span 3}
+}
+.yr{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:.25rem}
+.ttl{font-family:var(--serif);font-size:1.02rem;font-weight:600;line-height:1.38;color:var(--ink)}
+.meta{font-size:.82rem;color:var(--ink-3);line-height:1.55}
+.meta em{font-style:normal;color:var(--ink-2)}
+.doi{font-family:var(--mono);font-size:.72rem;letter-spacing:.01em;justify-self:start}
+.allpubs{margin-top:1.6rem;font-size:.88rem;color:var(--ink-3)}
+
+/* ============ simple list ============ */
+.slist{list-style:none;margin:0;padding:0;max-width:var(--measure)}
+.slist li{padding-block:.85rem;border-top:1px solid var(--rule);font-size:.95rem;color:var(--ink-2);line-height:1.55}
+.slist li:first-child{border-top:0;padding-top:0}
+.slist b{color:var(--ink);font-weight:600}
+
+/* ============ contact ============ */
+.mail{font-family:var(--serif);font-size:clamp(1.15rem,3.6vw,1.5rem);font-weight:600;
+  display:inline-block;margin-block:.9rem 1.4rem;word-break:break-word}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips a{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;
+  border:1px solid var(--rule-2);border-radius:2px;padding:.42rem .7rem;color:var(--ink-2);background:var(--paper)}
+.chips a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+
+/* ============ subheads / chapters / media ============ */
+.subhead{display:block;font-family:var(--mono);font-size:.68rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--ink-3);
+  margin-top:2.25rem;margin-bottom:.9rem}
+.inst em{display:block;font-style:normal;font-size:.68rem;letter-spacing:.02em;
+  color:var(--ink-3);margin-top:.12rem;text-transform:none;font-variant-numeric:tabular-nums}
+.roles{margin-top:.6rem;font-size:.85rem;color:var(--ink-3);line-height:1.6;max-width:30rem}
+.chaps{list-style:none;margin:0;padding:0;max-width:var(--measure)}
+.chaps li{padding-block:.75rem;border-top:1px solid var(--rule);
+  font-size:.85rem;color:var(--ink-2);line-height:1.55}
+.chaps li:first-child{border-top:0;padding-top:0}
+.chaps em{font-style:normal;color:var(--ink);font-family:var(--serif);font-size:.95rem}
+.chaps b{color:var(--ink);font-weight:600}
+.media{list-style:none;margin:0;padding:0}
+.media li{display:grid;grid-template-columns:1fr;gap:.2rem;
+  padding-block:.95rem;border-top:1px solid var(--rule)}
+.media li:first-child{border-top:0;padding-top:0}
+@media (min-width:620px){.media li{grid-template-columns:10.5rem 1fr;gap:.2rem 1.75rem;align-items:baseline}}
+.outlet{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--accent)}
+.outlet em{display:inline;font-style:normal;color:var(--ink-3);margin-left:.45rem;
+  font-variant-numeric:tabular-nums;text-transform:none}
+.mtitle{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.4;
+  color:var(--ink);justify-self:start}
+.mtitle:hover{color:var(--accent)}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--rule);padding-block:1.75rem 3rem;
+  display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between;
+  font-size:.78rem;color:var(--ink-3);line-height:1.6}
+footer p{max-width:32rem}
+</style>
+</head>
+<body>
+<div id="site" data-lang="pt">
+
+<header class="top">
+  <a class="brand" href="#top">Arthur Caye</a>
+  <nav class="links">
+    <a href="#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+    <a href="#percurso"><span lang="pt-BR">Percurso</span><span lang="en">Path</span></a>
+    <a href="#temas"><span lang="pt-BR">Temas</span><span lang="en">Topics</span></a>
+    <a href="#pesquisa"><span lang="pt-BR">Pesquisa</span><span lang="en">Research</span></a>
+    <a href="#publicacoes"><span lang="pt-BR">Publicações</span><span lang="en">Publications</span></a>
+    <a href="#midia"><span lang="pt-BR">Mídia</span><span lang="en">Media</span></a>
+    <a href="#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+  </nav>
+  <div class="langbox" role="group" aria-label="Idioma / Language">
+    <button type="button" id="lang-pt" data-set="pt" aria-pressed="true">PT</button>
+    <button type="button" id="lang-en" data-set="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <img class="portrait" src="data:image/jpeg;base64,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" alt="Arthur Caye" width="420" height="420">
+    <div>
+      <h1>Arthur Caye</h1>
+      <p class="role">
+        <span lang="pt-BR">Médico psiquiatra da infância e da adolescência.</span>
+        <span lang="en">Child and adolescent psychiatrist.</span>
+      </p>
+      <p class="roles">
+        <span lang="pt-BR">Professor do Departamento de Psiquiatria da FMUSP · Coordenador geral do GRAPAL · Líder do LENS · Gerente de pesquisa do CISM</span>
+        <span lang="en">Professor, Department of Psychiatry, USP Medical School · General coordinator of GRAPAL · Head of LENS · Research manager at CISM</span>
+      </p>
+      <p class="lead">
+        <span lang="pt-BR">As perguntas que pesquiso são as que aparecem na clínica: quando um quadro de fato começa, se vai persistir, o que muda o seu curso e o que já se pode dizer a uma família sobre o futuro. Desde 2011 trabalho nessas perguntas com coortes que acompanham as mesmas crianças e adolescentes por mais de uma década, em universidades brasileiras e em colaborações internacionais.</span>
+        <span lang="en">The questions I research are the ones that come up in clinical work: when a condition actually begins, whether it will persist, what changes its course, and what can already be said to a family about the future. Since 2011 I have pursued these questions in cohorts that follow the same children and adolescents for more than a decade, at Brazilian universities and in international collaborations.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div>
+      <b lang="pt-BR">Docência</b><b lang="en">Faculty</b>
+      <span lang="pt-BR">Departamento de Psiquiatria, FMUSP</span>
+      <span lang="en">Department of Psychiatry, FMUSP</span>
+    </div>
+    <div>
+      <b lang="pt-BR">Coordenação</b><b lang="en">Coordination</b>
+      <span lang="pt-BR">GRAPAL, saúde mental do estudante da FMUSP</span>
+      <span lang="en">GRAPAL, student mental health at FMUSP</span>
+    </div>
+    <div>
+      <b lang="pt-BR">Editoria</b><b lang="en">Editorial</b>
+      <span lang="pt-BR">International Editor-at-Large, JAACAP</span>
+      <span lang="en">International Editor-at-Large, JAACAP</span>
+    </div>
+    <div>
+      <b lang="pt-BR">Produção</b><b lang="en">Output</b>
+      <span lang="pt-BR">Mais de 100 artigos, mais de 24 mil citações</span>
+      <span lang="en">More than 100 articles, more than 24,000 citations</span>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <span class="eyebrow" lang="pt-BR">Sobre</span><span class="eyebrow" lang="en">About</span>
+    <h2><span lang="pt-BR">Formação clínica, trabalho científico</span><span lang="en">Clinical training, scientific work</span></h2>
+    <div class="prose">
+      <p lang="pt-BR">Sou médico formado pela <a href="https://www.ufrgs.br/" target="_blank" rel="noopener">Universidade Federal do Rio Grande do Sul</a>, com residência em Psiquiatria e em Psiquiatria da Infância e da Adolescência no <a href="https://www.hcpa.edu.br/" target="_blank" rel="noopener">Hospital de Clínicas de Porto Alegre</a>. Meu doutorado em Psiquiatria foi feito no programa MD-PhD da UFRGS e no programa internacional tripartite da UFRGS, da USP e da UNIFESP, sob orientação de Luis Augusto Rohde, seguido de pós-doutorado na UFRGS.</p>
+      <p lang="en">I trained in medicine at the <a href="https://www.ufrgs.br/" target="_blank" rel="noopener">Federal University of Rio Grande do Sul</a>, and completed residencies in Psychiatry and in Child and Adolescent Psychiatry at <a href="https://www.hcpa.edu.br/" target="_blank" rel="noopener">Hospital de Clínicas de Porto Alegre</a>. My PhD in Psychiatry was completed in the UFRGS MD-PhD track and in the international tripartite programme of UFRGS, USP and UNIFESP, supervised by Luis Augusto Rohde, followed by postdoctoral work at UFRGS.</p>
+
+      <p lang="pt-BR">Hoje sou professor do Departamento de Psiquiatria da <a href="https://www.fm.usp.br/" target="_blank" rel="noopener">Faculdade de Medicina da USP</a>, onde lidero o <strong><a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener">LENS</a></strong>, grupo de pesquisa em epidemiologia longitudinal e neurodesenvolvimento sediado no <a href="https://ipqhc.org.br/" target="_blank" rel="noopener">Instituto de Psiquiatria</a>, e coordeno o <strong><a href="https://www.fm.usp.br/rede-apoio/coordenacao-de-atencao-a-saude-mental-grapal" target="_blank" rel="noopener">GRAPAL</a></strong>, o serviço de saúde mental dos estudantes da Faculdade. Sou também gerente de pesquisa do <strong><a href="https://cism.org.br/" target="_blank" rel="noopener">CISM</a></strong>, o Centro de Pesquisa e Inovação em Saúde Mental, e docente dos programas de pós-graduação em Psiquiatria da USP e da UFRGS.</p>
+      <p lang="en">I am now a professor in the Department of Psychiatry at the <a href="https://www.fm.usp.br/" target="_blank" rel="noopener">USP Medical School</a>, where I lead <strong><a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener">LENS</a></strong>, a research group in longitudinal epidemiology and neurodevelopmental science based at the <a href="https://ipqhc.org.br/" target="_blank" rel="noopener">Institute of Psychiatry</a>, and coordinate <strong><a href="https://www.fm.usp.br/rede-apoio/coordenacao-de-atencao-a-saude-mental-grapal" target="_blank" rel="noopener">GRAPAL</a></strong>, the School's mental health service for its students. I am also research manager at <strong><a href="https://cism.org.br/" target="_blank" rel="noopener">CISM</a></strong>, the Center for Research and Innovation in Mental Health, and faculty in the graduate programmes in Psychiatry at USP and UFRGS.</p>
+
+      <p lang="pt-BR">Minha formação é clínica antes de ser metodológica, e é isso que define as perguntas. Coortes que acompanham as mesmas pessoas por muitos anos permitem ver o curso real de um quadro, e não um retrato isolado: quem melhora, quem não melhora, o que aparece depois e o que já vinha antes. É desse material que saem respostas úteis para quem está diante de uma criança concreta, e não de uma média.</p>
+      <p lang="en">My training is clinical before it is methodological, and that is what sets the questions. Cohorts that follow the same people for many years make it possible to see the actual course of a condition rather than a single snapshot: who improves, who does not, what appears later and what was already there before. That is the material that yields answers useful to someone facing an actual child rather than an average.</p>
+    </div>
+  </section>
+
+  <section id="percurso">
+    <span class="eyebrow" lang="pt-BR">Percurso</span><span class="eyebrow" lang="en">Path</span>
+    <h2><span lang="pt-BR">De 2011 até aqui</span><span lang="en">From 2011 to now</span></h2>
+    <ol class="tl">
+      <li>
+        <span class="tl-when">2011</span>
+        <span class="tl-what"><span lang="pt-BR">Primeiro contato com a pesquisa</span><span lang="en">First steps in research</span></span>
+        <span class="tl-where"><span lang="pt-BR">Iniciação científica no <a href="https://www.ufrgs.br/prodah/" target="_blank" rel="noopener">ProDAH</a>, o programa de TDAH do Hospital de Clínicas de Porto Alegre, com Luis Augusto Rohde.</span><span lang="en">Undergraduate research fellow at <a href="https://www.ufrgs.br/prodah/" target="_blank" rel="noopener">ProDAH</a>, the ADHD programme of Hospital de Clínicas de Porto Alegre, with Luis Augusto Rohde.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2011-2016</span>
+        <span class="tl-what"><span lang="pt-BR">Graduação em Medicina</span><span lang="en">Doctor of Medicine</span></span>
+        <span class="tl-where"><span lang="pt-BR">Universidade Federal do Rio Grande do Sul. Estágios na PUC do Chile e na Duke University, com Terrie Moffitt e Avshalom Caspi.</span><span lang="en">Federal University of Rio Grande do Sul. Electives at PUC Chile and Duke University, with Terrie Moffitt and Avshalom Caspi.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2015-2018</span>
+        <span class="tl-what"><span lang="pt-BR">Doutorado em Psiquiatria e Ciências do Comportamento</span><span lang="en">PhD in Psychiatry and Behavioural Sciences</span></span>
+        <span class="tl-where"><span lang="pt-BR">UFRGS, no programa MD-PhD e no programa internacional tripartite com USP e UNIFESP. Tese sobre o curso desenvolvimental do TDAH, defendida em dezembro de 2018.</span><span lang="en">UFRGS, in the MD-PhD track and the international tripartite programme with USP and UNIFESP. Thesis on the developmental course of ADHD, defended in December 2018.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2016-2020</span>
+        <span class="tl-what"><span lang="pt-BR">Residência médica em Psiquiatria</span><span lang="en">Residency in Psychiatry</span></span>
+        <span class="tl-where">Hospital de Clínicas de Porto Alegre</span>
+      </li>
+      <li>
+        <span class="tl-when">2019</span>
+        <span class="tl-what"><span lang="pt-BR">Concurso de Teses da Associação Brasileira de Psiquiatria</span><span lang="en">Brazilian Psychiatric Association thesis competition</span></span>
+        <span class="tl-where"><span lang="pt-BR">Segundo lugar na categoria doutorado, no Congresso Brasileiro de Psiquiatria.</span><span lang="en">Second place in the doctoral category, at the Brazilian Congress of Psychiatry.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2020-2021</span>
+        <span class="tl-what"><span lang="pt-BR">Residência médica em Psiquiatria da Infância e da Adolescência</span><span lang="en">Residency in Child and Adolescent Psychiatry</span></span>
+        <span class="tl-where"><span lang="pt-BR">Hospital de Clínicas de Porto Alegre, com estágio no Instituto de Psiquiatria do Hospital das Clínicas da FMUSP.</span><span lang="en">Hospital de Clínicas de Porto Alegre, with an elective at the Institute of Psychiatry of the FMUSP teaching hospital.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2021-2025</span>
+        <span class="tl-what"><span lang="pt-BR">Pós-doutorado</span><span lang="en">Postdoctoral research</span></span>
+        <span class="tl-where"><span lang="pt-BR">ProDAH, Hospital de Clínicas de Porto Alegre, UFRGS.</span><span lang="en">ProDAH, Hospital de Clínicas de Porto Alegre, UFRGS.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2022</span>
+        <span class="tl-what"><span lang="pt-BR">Gerência de pesquisa do CISM</span><span lang="en">Research management at CISM</span></span>
+        <span class="tl-where"><span lang="pt-BR">Convite de Eurípedes Miguel para o núcleo de governança do <a href="https://cism.org.br/" target="_blank" rel="noopener">Centro de Pesquisa e Inovação em Saúde Mental</a>.</span><span lang="en">Invited by Eurípedes Miguel to the governance core of the <a href="https://cism.org.br/" target="_blank" rel="noopener">Center for Research and Innovation in Mental Health</a>.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2023</span>
+        <span class="tl-what"><span lang="pt-BR">Editoria e Global Burden of Disease</span><span lang="en">Editorial work and Global Burden of Disease</span></span>
+        <span class="tl-where"><span lang="pt-BR">Editor associado do Brazilian Journal of Psychiatry e senior collaborator do <a href="https://www.healthdata.org/research-analysis/gbd" target="_blank" rel="noopener">Global Burden of Disease Study</a>.</span><span lang="en">Associate editor of the Brazilian Journal of Psychiatry and senior collaborator in the <a href="https://www.healthdata.org/research-analysis/gbd" target="_blank" rel="noopener">Global Burden of Disease Study</a>.</span></span>
+      </li>
+      <li>
+        <span class="tl-when">2026</span>
+        <span class="tl-what"><span lang="pt-BR">Professor Doutor do Departamento de Psiquiatria da FMUSP</span><span lang="en">Professor in the Department of Psychiatry, FMUSP</span></span>
+        <span class="tl-where"><span lang="pt-BR">Onde lidero o <a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener">LENS</a> e coordeno o <a href="https://www.fm.usp.br/rede-apoio/coordenacao-de-atencao-a-saude-mental-grapal" target="_blank" rel="noopener">GRAPAL</a>.</span><span lang="en">Where I lead <a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener">LENS</a> and coordinate <a href="https://www.fm.usp.br/rede-apoio/coordenacao-de-atencao-a-saude-mental-grapal" target="_blank" rel="noopener">GRAPAL</a>.</span></span>
+      </li>
+    </ol>
+  </section>
+
+  <section id="temas">
+    <span class="eyebrow" lang="pt-BR">Temas de trabalho</span><span class="eyebrow" lang="en">What I work on</span>
+    <h2><span lang="pt-BR">O que estudo, e por quê</span><span lang="en">What I study, and why</span></h2>
+    <div class="topics">
+      <div class="topic">
+        <h3><span lang="pt-BR">TDAH ao longo da vida</span><span lang="en">ADHD across the lifespan</span></h3>
+        <p lang="pt-BR">Quando o TDAH de fato começa, e o que fazer diante do adolescente ou do adulto jovem que preenche critérios hoje sem ter tido sintomas claros na infância. Em coortes de nascimento, o curso se mostrou menos estável do que os manuais sugerem, e isso muda o que se diz a uma família sobre prognóstico.</p>
+        <p lang="en">When ADHD actually begins, and what to do with the adolescent or young adult who meets criteria now without clear childhood symptoms. In birth cohorts the course proved less stable than the manuals suggest, and that changes what families are told about prognosis.</p>
+      </div>
+      <div class="topic">
+        <h3><span lang="pt-BR">Prognóstico e persistência</span><span lang="en">Prognosis and persistence</span></h3>
+        <p lang="pt-BR">Nem todo quadro persiste e nem todo quadro remite para sempre. Estudo como os sintomas surgem, se intensificam, remitem e voltam entre a infância, a adolescência e o início da vida adulta, porque é justamente essa informação que falta na hora da consulta.</p>
+        <p lang="en">Not every condition persists, and not every remission lasts. I study how symptoms emerge, intensify, remit and return between childhood, adolescence and early adulthood, because that is precisely the information missing at the point of care.</p>
+      </div>
+      <div class="topic">
+        <h3><span lang="pt-BR">Predição de risco na prática</span><span lang="en">Risk prediction in practice</span></h3>
+        <p lang="pt-BR">Calculadoras que estimam, a partir de informações simples e já disponíveis em consulta, o risco de um adolescente desenvolver depressão ou de um quadro de TDAH persistir. Uma delas está aberta ao público no <a href="https://www.ufrgs.br/prodah/adhd-calculator/" target="_blank" rel="noopener">site do ProDAH</a>.</p>
+        <p lang="en">Calculators that estimate, from simple information already available at a visit, the risk that an adolescent will develop depression or that an ADHD presentation will persist. One of them is openly available on the <a href="https://www.ufrgs.br/prodah/adhd-calculator/" target="_blank" rel="noopener">ProDAH website</a>.</p>
+      </div>
+      <div class="topic">
+        <h3><span lang="pt-BR">Tratamento e decisões clínicas</span><span lang="en">Treatment and clinical decisions</span></h3>
+        <p lang="pt-BR">Como escolher entre as opções disponíveis, quanto de medicação é suficiente, quem responde a quê e quais acomodações escolares e acadêmicas têm evidência por trás. Escrevi sobre isso em guias de tratamento e em editoriais no The Lancet Psychiatry e no JAACAP.</p>
+        <p lang="en">How to choose among available options, how much medication is enough, who responds to what, and which school and university accommodations have evidence behind them. I have written on this in treatment guides and in editorials for The Lancet Psychiatry and JAACAP.</p>
+      </div>
+      <div class="topic">
+        <h3><span lang="pt-BR">Saúde mental do estudante</span><span lang="en">Student mental health</span></h3>
+        <p lang="pt-BR">Como reconhecer e acolher sofrimento psíquico na universidade, e como organizar um serviço que dê conta disso. É o terreno do GRAPAL, na FMUSP, e de um estudo de coorte com estudantes que já entrou na segunda onda.</p>
+        <p lang="en">How psychological distress is recognised and met at university, and how to organise a service that can handle it. This is the ground GRAPAL covers at FMUSP, alongside a student cohort study now in its second wave.</p>
+      </div>
+      <div class="topic">
+        <h3><span lang="pt-BR">Acesso e cuidado no Brasil</span><span lang="en">Access and care in Brazil</span></h3>
+        <p lang="pt-BR">Quantas crianças e adolescentes adoecem, quantas chegam ao cuidado e o que trava esse caminho. Trabalho com estimativas do Global Burden of Disease e com projetos que levam intervenções de saúde mental para a atenção primária.</p>
+        <p lang="en">How many children and adolescents fall ill, how many reach care, and what blocks the path. I work with Global Burden of Disease estimates and with projects that bring mental health interventions into primary care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pesquisa">
+    <span class="eyebrow" lang="pt-BR">Pesquisa</span><span class="eyebrow" lang="en">Research</span>
+    <h2><span lang="pt-BR">Grupos e centros</span><span lang="en">Groups and centres</span></h2>
+    <div class="labs">
+
+      <div class="labcard">
+        <p class="kicker">FMUSP · IPq · FAPESP</p>
+        <h3>LENS</h3>
+        <p lang="pt-BR">Longitudinal Epidemiology and Neurodevelopmental Science Lab, grupo que lidero no <a href="https://ipqhc.org.br/" target="_blank" rel="noopener">Instituto de Psiquiatria</a> da FMUSP. Associado ao CISM e financiado pela <a href="https://fapesp.br/" target="_blank" rel="noopener">FAPESP</a>, reúne pós-doutorandos, doutorandos e alunos de iniciação científica em torno do curso da psicopatologia ao longo do desenvolvimento.</p>
+        <p lang="en">Longitudinal Epidemiology and Neurodevelopmental Science Lab, the group I lead at the <a href="https://ipqhc.org.br/" target="_blank" rel="noopener">Institute of Psychiatry</a>, FMUSP. Associated with CISM and funded by <a href="https://fapesp.br/" target="_blank" rel="noopener">FAPESP</a>, it brings postdoctoral researchers, doctoral students and undergraduate fellows together around the course of psychopathology across development.</p>
+        <a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener"><span lang="pt-BR">Site do grupo</span><span lang="en">Group website</span> &rarr;</a>
+      </div>
+
+      <div class="labcard">
+        <p class="kicker">USP · UNIFESP · UFRGS · FAPESP</p>
+        <h3>CISM</h3>
+        <p lang="pt-BR">Centro de Pesquisa e Inovação em Saúde Mental, coordenado por Eurípedes Constantino Miguel. Sou gerente de pesquisa desde 2022 e integro o núcleo de governança, que reúne mais de 100 pesquisadores de cinco universidades brasileiras em dezenas de projetos, organizados em três eixos:</p>
+        <p lang="en">Center for Research and Innovation in Mental Health, coordinated by Eurípedes Constantino Miguel. I have been research manager since 2022 and sit on the governance core, which brings together more than 100 researchers from five Brazilian universities across dozens of projects, organised along three axes:</p>
+        <ul class="axes">
+          <li><span lang="pt-BR"><b>Neurociência de precisão</b>, ancorada em uma coorte transgeracional com 2.511 crianças e adolescentes acompanhados por mais de uma década, agora com neuroimagem e dados de três gerações.</span><span lang="en"><b>Precision neuroscience</b>, anchored in a transgenerational cohort of 2,511 children and adolescents followed for more than a decade, now with neuroimaging and data from three generations.</span></li>
+          <li><span lang="pt-BR"><b>Inovação e saúde mental digital</b>, criando e validando soluções digitais que possam ser escaladas no Brasil e em outros cenários de recursos limitados, testadas em ensaios pragmáticos.</span><span lang="en"><b>Innovation and digital mental health</b>, building and validating digital solutions that can scale in Brazil and other resource-limited settings, tested in pragmatic trials.</span></li>
+          <li><span lang="pt-BR"><b>Ciência da implementação</b> e transferência de tecnologia, levando intervenções de saúde mental para dentro das unidades básicas de saúde de cidades inteiras. Coordeno a implementação do Primeiros Laços e participo do CONEMO.</span><span lang="en"><b>Implementation science</b> and technology transfer, taking mental health interventions into the primary care units of entire cities. I coordinate the implementation of Primeiros Laços and take part in CONEMO.</span></li>
+        </ul>
+        <a href="https://cism.org.br/" target="_blank" rel="noopener"><span lang="pt-BR">Site do centro</span><span lang="en">Centre website</span> &rarr;</a>
+      </div>
+
+      <div class="labcard">
+        <p class="kicker">HCPA · UFRGS</p>
+        <h3>ProDAH</h3>
+        <p lang="pt-BR">Programa de Transtornos de Déficit de Atenção e Hiperatividade do Hospital de Clínicas de Porto Alegre, coordenado por Luis Augusto Rohde. Foi onde comecei, como aluno de iniciação científica em 2011, e onde fiz o doutorado, o pós-doutorado e parte do treinamento clínico em TDAH. Segue sendo parceiro nas linhas de trajetórias e de predição.</p>
+        <p lang="en">ADHD programme of Hospital de Clínicas de Porto Alegre, coordinated by Luis Augusto Rohde. This is where I started, as an undergraduate research fellow in 2011, and where I completed my PhD, my postdoctoral work and part of my clinical training in ADHD. It remains a partner on the trajectory and prediction lines.</p>
+        <a href="https://www.ufrgs.br/prodah/" target="_blank" rel="noopener"><span lang="pt-BR">Site do programa</span><span lang="en">Programme website</span> &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="publicacoes">
+    <span class="eyebrow" lang="pt-BR">Publicações selecionadas</span><span class="eyebrow" lang="en">Selected publications</span>
+    <h2><span lang="pt-BR">Oito trabalhos que resumem as linhas</span><span lang="en">Eight papers that map the work</span></h2>
+    <ul class="pubs">
+      <li>
+        <span class="yr">2026</span>
+        <span class="ttl">Mental disorders and self-harm among Brazilian children, adolescents, and young adults: prevalence, disability, and mortality estimates from the Global Burden of Disease Study</span>
+        <span class="meta">Buchweitz C, <em>Caye A</em>, Piccin J, Duarte I, Polanczyk GV, Rohde LA, et al. <em>The Lancet Regional Health &ndash; Americas</em></span>
+        <a class="doi" href="https://doi.org/10.1016/j.lana.2026.101583" target="_blank" rel="noopener">doi:10.1016/j.lana.2026.101583</a>
+      </li>
+      <li>
+        <span class="yr">2024</span>
+        <span class="ttl">Worldwide prevalence and disability from mental disorders across childhood and adolescence: evidence from the Global Burden of Disease Study</span>
+        <span class="meta">Kieling C, Buchweitz C, <em>Caye A</em>, Silvani J, Ameis SH, Brunoni AR, et al. <em>JAMA Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1001/jamapsychiatry.2023.5051" target="_blank" rel="noopener">doi:10.1001/jamapsychiatry.2023.5051</a>
+      </li>
+      <li>
+        <span class="yr">2024</span>
+        <span class="ttl">Individualized prediction models in ADHD: a systematic review and meta-regression</span>
+        <span class="meta">Salazar de Pablo G, Iniesta R, Bellato A, <em>Caye A</em>, Dobrosavljevic M, Parlatini V, et al. <em>Molecular Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1038/s41380-024-02606-5" target="_blank" rel="noopener">doi:10.1038/s41380-024-02606-5</a>
+      </li>
+      <li>
+        <span class="yr">2023</span>
+        <span class="ttl">Association between relative age at school and persistence of ADHD in prospective studies: an individual participant data meta-analysis</span>
+        <span class="meta">Gosling CJ, Caparos S, Pinabiaux C, Schwarzer G, R&uuml;cker G, Agha SS, et al. <em>The Lancet Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1016/S2215-0366(23)00272-9" target="_blank" rel="noopener">doi:10.1016/S2215-0366(23)00272-9</a>
+      </li>
+      <li>
+        <span class="yr">2019</span>
+        <span class="ttl">Treatment strategies for ADHD: an evidence-based guide to select optimal treatment</span>
+        <span class="meta"><em>Caye A</em>, Swanson JM, Coghill D, Rohde LA. <em>Molecular Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1038/s41380-018-0116-3" target="_blank" rel="noopener">doi:10.1038/s41380-018-0116-3</a>
+      </li>
+      <li>
+        <span class="yr">2018</span>
+        <span class="ttl">Late-onset ADHD reconsidered with comprehensive repeated assessments between ages 10 and 25</span>
+        <span class="meta">Sibley MH, Rohde LA, Swanson JM, Hechtman LT, Molina BSG, Mitchell JT, et al. <em>American Journal of Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1176/appi.ajp.2017.17030298" target="_blank" rel="noopener">doi:10.1176/appi.ajp.2017.17030298</a>
+      </li>
+      <li>
+        <span class="yr">2016</span>
+        <span class="ttl">Attention-deficit/hyperactivity disorder trajectories from childhood to young adulthood: evidence from a birth cohort supporting a late-onset syndrome</span>
+        <span class="meta"><em>Caye A</em>, Rocha TBM, Anselmi L, Murray J, Menezes AMB, Barros FC, et al. <em>JAMA Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1001/jamapsychiatry.2016.0383" target="_blank" rel="noopener">doi:10.1001/jamapsychiatry.2016.0383</a>
+      </li>
+      <li>
+        <span class="yr">2015</span>
+        <span class="ttl">Annual Research Review: a meta-analysis of the worldwide prevalence of mental disorders in children and adolescents</span>
+        <span class="meta">Polanczyk GV, Salum GA, Sugaya LS, <em>Caye A</em>, Rohde LA. <em>Journal of Child Psychology and Psychiatry</em></span>
+        <a class="doi" href="https://doi.org/10.1111/jcpp.12381" target="_blank" rel="noopener">doi:10.1111/jcpp.12381</a>
+      </li>
+    </ul>
+
+    <span class="subhead" lang="pt-BR">Capítulos de livro</span><span class="subhead" lang="en">Book chapters</span>
+    <ul class="chaps">
+      <li>Mathis MA, <b>Caye A</b>, Miguel EC, El Rafihi Ferreira R. <em>Inovações tecnológicas no diagnóstico e no tratamento do transtorno obsessivo-compulsivo.</em> In: IA na psiquiatria: como a tecnologia pode ajudar no diagnóstico e no tratamento dos transtornos mentais. Manole, 2024. p. 113-125.</li>
+      <li>Leffa DT, <b>Caye A</b>, Rohde LA. <em>ADHD in children and adults: diagnosis and prognosis.</em> In: New discoveries in the behavioral neuroscience of attention-deficit hyperactivity disorder. Current Topics in Behavioral Neurosciences, v. 57. Springer, 2022.</li>
+      <li><b>Caye A</b>, Kohrt B, Kieling C. <em>The psychopharmacotherapeutic alliance when resources are limited.</em> In: Thinking about prescribing: the psychology of psychopharmacology with diverse youth and families. American Psychiatric Association Publishing, 2022.</li>
+      <li><b>Caye A</b>, Piccin J, Kieling C. <em>Tratamento da depressão na infância e na adolescência.</em> In: Clínica psiquiátrica: a terapêutica psiquiátrica, 2ª ed., 2021. p. 693.</li>
+      <li>Piccin J, <b>Caye A</b>, Kieling C. <em>Depressão na infância e na adolescência.</em> In: Clínica psiquiátrica: as grandes síndromes psiquiátricas, 2ª ed., 2021. p. 97.</li>
+      <li><b>Caye A</b>, Coghill D, Zuddas A, Banaschewski T, Rohde LA. <em>PHDA: novos desenvolvimentos, problemas e desafios.</em> In: Perturbação de hiperatividade/défice de atenção. Pactor, Lisboa, 2020. p. 43-64.</li>
+      <li><b>Caye A</b>, Polanczyk GV, Rohde LA. <em>Transtorno de déficit de atenção/hiperatividade (TDAH).</em> In: Tratado de psiquiatria da infância e da adolescência, 3ª ed. Atheneu, Rio de Janeiro, 2018. p. 373-386.</li>
+      <li>Machado JD, <b>Caye A</b>, Frick PJ, Rohde LA. <em>DSM-5: major changes for child and adolescent disorders.</em> In: IACAPAP e-Textbook of child and adolescent mental health. IACAPAP, Genebra, 2013.</li>
+      <li><b>Caye A</b>, Machado JD, Rohde LA. <em>Transtorno de déficit de atenção com hiperatividade.</em> In: Programa de Atualização em Psiquiatria, PROPSIQ, 2ª ed. Artmed, Porto Alegre, 2013. p. 77-116.</li>
+    </ul>
+
+    <p class="allpubs">
+      <span lang="pt-BR">Mais de 24 mil citações, índice h 43 e índice i10 64 no Google Scholar, em setembro de 2026. Lista completa:</span>
+      <span lang="en">More than 24,000 citations, an h-index of 43 and an i10-index of 64 on Google Scholar, as of September 2026. Full list:</span>
+      <a href="http://lattes.cnpq.br/8879927522474172" target="_blank" rel="noopener">Lattes</a> ·
+      <a href="https://scholar.google.com/citations?user=5JjL-JcAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Caye+A%5BAuthor%5D" target="_blank" rel="noopener">PubMed</a>
+    </p>
+  </section>
+
+  <section id="ensino">
+    <span class="eyebrow" lang="pt-BR">Ensino, editoria e reconhecimento</span><span class="eyebrow" lang="en">Teaching, editorial work and recognition</span>
+    <h2><span lang="pt-BR">Atuação acadêmica</span><span lang="en">Academic roles</span></h2>
+    <ul class="slist">
+      <li>
+        <span lang="pt-BR"><b>International Editor-at-Large</b> do <a href="https://www.jaacap.org/" target="_blank" rel="noopener">Journal of the American Academy of Child and Adolescent Psychiatry</a> (JAACAP), principal periódico da área no mundo.</span>
+        <span lang="en"><b>International Editor-at-Large</b>, <a href="https://www.jaacap.org/" target="_blank" rel="noopener">Journal of the American Academy of Child and Adolescent Psychiatry</a> (JAACAP), the leading journal in the field.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Editor Associado</b> do Brazilian Journal of Psychiatry, desde 2023.</span>
+        <span lang="en"><b>Associate Editor</b>, Brazilian Journal of Psychiatry, since 2023.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Editor Associado</b> do BMC Psychiatry, de 2019 a 2024.</span>
+        <span lang="en"><b>Associate Editor</b>, BMC Psychiatry, from 2019 to 2024.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Mais de 100 pareceres</b> como revisor ad hoc, para JAMA Psychiatry, The Lancet Psychiatry, JAACAP, Journal of Child Psychology and Psychiatry e British Journal of Psychiatry, entre outros.</span>
+        <span lang="en"><b>More than 100 peer reviews</b> as an ad hoc referee, for JAMA Psychiatry, The Lancet Psychiatry, JAACAP, Journal of Child Psychology and Psychiatry and British Journal of Psychiatry, among others.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Senior collaborator</b> do <a href="https://www.healthdata.org/research-analysis/gbd" target="_blank" rel="noopener">Global Burden of Disease Study</a> desde 2023, e membro do Grupo de Trabalho em Saúde Mental da <a href="https://www.abc.org.br/" target="_blank" rel="noopener">Academia Brasileira de Ciências</a>.</span>
+        <span lang="en"><b>Senior collaborator</b> in the <a href="https://www.healthdata.org/research-analysis/gbd" target="_blank" rel="noopener">Global Burden of Disease Study</a> since 2023, and member of the Mental Health Working Group of the <a href="https://www.abc.org.br/" target="_blank" rel="noopener">Brazilian Academy of Sciences</a>.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Docente</b> dos programas de pós-graduação em Psiquiatria da USP e da UFRGS, com orientação de iniciação científica, mestrado, doutorado e pós-doutorado.</span>
+        <span lang="en"><b>Faculty</b> in the graduate programmes in Psychiatry at USP and UFRGS, supervising undergraduate, master's, doctoral and postdoctoral researchers.</span>
+      </li>
+      <li>
+        <span lang="pt-BR"><b>Avaliador de projetos</b> para o UNICEF, o Thrasher Research Fund e o Ministério da Saúde da França. Mentor do Early Career Mentorship Program da <a href="https://iacapap.org/" target="_blank" rel="noopener">IACAPAP</a>.</span>
+        <span lang="en"><b>Grant reviewer</b> for UNICEF, the Thrasher Research Fund and the French Ministry of Health. Mentor in the <a href="https://iacapap.org/" target="_blank" rel="noopener">IACAPAP</a> Early Career Mentorship Program.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="midia">
+    <span class="eyebrow" lang="pt-BR">Na mídia</span><span class="eyebrow" lang="en">In the media</span>
+    <h2><span lang="pt-BR">Repercussão do trabalho</span><span lang="en">Coverage of the work</span></h2>
+    <ul class="media">
+      <li>
+        <span class="outlet">Psychiatric Times<em>2024</em></span>
+        <a class="mtitle" href="https://www.psychiatrictimes.com/view/innovative-biomarker-research-focuses-more-at-controls" target="_blank" rel="noopener">Innovative biomarker research focuses more at controls</a>
+      </li>
+      <li>
+        <span class="outlet">Jornal da USP<em>2024</em></span>
+        <a class="mtitle" href="https://jornal.usp.br/artigos/tecnologia-pode-mitigar-epidemia-de-transtornos-mentais/" target="_blank" rel="noopener">Tecnologia pode mitigar epidemia de transtornos mentais</a>
+      </li>
+      <li>
+        <span class="outlet">Zero Hora<em>2024</em></span>
+        <a class="mtitle" href="https://gauchazh.clicrbs.com.br/saude/noticia/2024/02/uma-em-cada-10-pessoas-entre-cinco-e-24-anos-apresenta-ao-menos-um-transtorno-mental-diz-estudo-cls99iykn002l015s8ad7ryxz.html" target="_blank" rel="noopener">Uma em cada 10 pessoas entre cinco e 24 anos apresenta ao menos um transtorno mental, diz estudo</a>
+      </li>
+      <li>
+        <span class="outlet">SBT News<em>2024</em></span>
+        <a class="mtitle" href="https://sbtnews.sbt.com.br/noticia/saude/quem-tem-tdah-possui-direito-a-consulta-na-hora-da-prova-entenda" target="_blank" rel="noopener">Quem tem TDAH tem direito a consulta na hora da prova?</a>
+      </li>
+      <li>
+        <span class="outlet">Quartz<em>2017</em></span>
+        <a class="mtitle" href="https://qz.com/914046/proof-that-adhd-is-a-brain-disorder-the-brains-of-those-with-adhd-are-smaller-than-the-rest-of-the-population" target="_blank" rel="noopener">A new study finds compelling evidence that the brains of those with ADHD are different</a>
+      </li>
+      <li>
+        <span class="outlet">CNN<em>2016</em></span>
+        <a class="mtitle" href="https://edition.cnn.com/2016/07/15/health/adult-adhd-hyperfocus/index.html" target="_blank" rel="noopener">Hyperfocus: the other side of adult ADHD</a>
+      </li>
+      <li>
+        <span class="outlet">The Wall Street Journal<em>2016</em></span>
+        <a class="mtitle" href="https://www.wsj.com/articles/can-adults-get-a-different-kind-of-adhd-1464023009" target="_blank" rel="noopener">Can adults get a different kind of ADHD?</a>
+      </li>
+      <li>
+        <span class="outlet">Veja Saúde<em>2016</em></span>
+        <a class="mtitle" href="https://saude.abril.com.br/mente-saudavel/tdah-nao-tem-idade-para-comecar" target="_blank" rel="noopener">Inquietos tardios: TDAH não tem idade para começar</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <span class="eyebrow" lang="pt-BR">Contato</span><span class="eyebrow" lang="en">Contact</span>
+    <h2><span lang="pt-BR">Fale comigo</span><span lang="en">Get in touch</span></h2>
+    <div class="prose">
+      <p lang="pt-BR">Para contato profissional, convites acadêmicos, imprensa e colaborações de pesquisa.</p>
+      <p lang="en">For professional contact, academic invitations, press and research collaborations.</p>
+    </div>
+    <a class="mail" href="mailto:arthurcaye@gmail.com">arthurcaye@gmail.com</a>
+    <div class="chips">
+      <a href="http://lattes.cnpq.br/8879927522474172" target="_blank" rel="noopener">Lattes</a>
+      <a href="https://scholar.google.com/citations?user=5JjL-JcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Caye+A%5BAuthor%5D" target="_blank" rel="noopener">PubMed</a>
+      <a href="https://www.linkedin.com/in/arthur-caye-b000231b5/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://lens-lab-usp.github.io/" target="_blank" rel="noopener">LENS Lab</a>
+      <a href="https://cism.org.br/" target="_blank" rel="noopener">CISM</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p lang="pt-BR">Página de perfil profissional e acadêmico. O conteúdo tem caráter informativo e não constitui orientação clínica individual.</p>
+  <p lang="en">Professional and academic profile page. The content is informational and does not constitute individual clinical advice.</p>
+  <p>&copy; <span id="yr">2026</span> Arthur Caye</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var site = document.getElementById('site');
+  var btns = document.querySelectorAll('.langbox button');
+  var y = document.getElementById('yr');
+  if (y) y.textContent = new Date().getFullYear();
+
+  function set(lang, persist){
+    site.setAttribute('data-lang', lang);
+    document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : 'en';
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set === lang)); });
+    if (persist) { try { localStorage.setItem('ac-lang', lang); } catch(e){} }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem('ac-lang'); } catch(e){}
+  set(saved === 'en' ? 'en' : 'pt', false);
+
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ set(b.dataset.set, true); });
+  });
+})();
+</script>
+</body>
+</html>
